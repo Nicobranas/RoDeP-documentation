@@ -1,4 +1,4 @@
-# Welcome to my doc
+<! -- # Welcome to my doc
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
@@ -16,3 +16,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
     "cartouche"
+
+-->
+
+#Welcome to the RoDeP doc !
+
+You will find everything you need about this project on this site.
