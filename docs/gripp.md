@@ -29,6 +29,7 @@
 <p align = justify>The list of the elements found on the gripping part is below :
 <br/> </p>
 |Number|Component|Specifications|Example|
+|--- |--- |--- |--- |
 |2|Axes|||
 |4|Attaches|||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
