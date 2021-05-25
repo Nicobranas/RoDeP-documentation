@@ -1,0 +1,29 @@
+site_name: RoDeP's documentation
+copyright: 'Copyright © 2020-2021 Sony CSL'
+nav:
+    - Home: index.md
+    - About: about.md
+    - Documentation:
+        - Starting instruction: starting_instruction.md
+        - Manual : manual.md
+        - Hardware :
+            - Components list : component.md
+            - Assembly : assembly.md
+            - Gripper system : gripp.md
+            - Rail DIN system : rail.md
+        - Software :
+            - Line tracker : tracker.md
+            - Motor control : control.md
+theme:
+    language: en
+    name: material
+    palette:
+        primary: indigo
+        accent: indigo
+markdown_extensions:
+    - admonition
+    - footnotes
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
