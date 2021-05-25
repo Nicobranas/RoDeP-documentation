@@ -11,9 +11,12 @@ To fix the different processor and controlor on the Rail DIN we use support, the
 
 ![Rail DIN support](RailDIN files/RailDIN_support.png)
 
-Then we use homemade adaptator to fix devices. 
+Then we use homemade plastic adaptator to bind devices and supports. 
 
-![Arduino support](RailDIN files/support arduino.png)
-![Raspberry b+ support](RailDIN files/support raspberry b+.png)
+![Arduino support](RailDIN files/support_arduino.png)
 
+![Raspberry 3b+ support](RailDIN files/support_raspberry_3b+.png)
 
+The assembly is complex, do not tighten the bolts too hard the first time or use [pcb spacer/support](http://www.klip-it.com/50-pcb-spacer-printed-cardboard-support?page=2)
+
+![PCB support](RailDIN files/pcb_support.png)

@@ -25,6 +25,7 @@ theme:
         primary: indigo
         accent: indigo
 markdown_extensions:
+    - attr_list
     - admonition
     - footnotes
     - codehilite:
