@@ -21,4 +21,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 #Welcome to the RoDeP doc !
 
-You will find everything you need about this project here.
+You will find everything you need about this project on this site.
