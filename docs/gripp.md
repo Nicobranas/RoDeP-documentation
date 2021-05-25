@@ -8,7 +8,7 @@
 <br/> </p>
 |Number|Component|Specifications|Example|
 |--- |--- |--- |--- |
-|4|Axis|||
+|4|Axis|length 34,5 cm||
 |1|Bottom Plate|||
 |1|Top plate|||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
@@ -30,8 +30,8 @@
 <br/> </p>
 |Number|Component|Specifications|Example|
 |--- |--- |--- |--- |
-|2|Axes|||
-|4|Attaches|||
+|2|Axis|f|g|
+|4|Attaches|length 25 cm||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
 |1|Courroie|||
 |2|Pignons|||
@@ -44,4 +44,5 @@
 |1|Attache vis sans fin|||
 |14|Boulons|||
 |4|Petites vis pour encercler les axes|||
+|||||
 |||||
