@@ -7,12 +7,14 @@ nav:
         - Starting instruction: starting_instruction.md
         - Manual : manual.md
         - Hardware :
+            - Starting instruction : hardware_starting.md
             - Components list : component.md
             - Assembly : assembly.md
             - Gripper system : gripp.md
             - Rail DIN system : rail.md
             - Electric circuit : electriccircuit.md
         - Software :
+            - Starting instruction : software_starting.md
             - Line tracker : tracker.md
             - Motor control : control.md
     
