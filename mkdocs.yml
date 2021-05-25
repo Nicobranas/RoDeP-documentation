@@ -11,9 +11,11 @@ nav:
             - Assembly : assembly.md
             - Gripper system : gripp.md
             - Rail DIN system : rail.md
+            - Electric circuit : electriccircuit.md
         - Software :
             - Line tracker : tracker.md
             - Motor control : control.md
+    
 theme:
     language: en
     name: material
