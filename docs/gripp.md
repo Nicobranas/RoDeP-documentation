@@ -8,14 +8,14 @@
 <br/> </p>
 |Number|Component|Specifications|Example|
 |--- |--- |--- |--- |
-|4|Axis|length 34,5 cm||
-|1|Bottom Plate|||
-|1|Top plate|||
+|4|linear guide|length : 34,5 cm, diameter 4 mm||
+|1|Bottom Plate|Custom made||
+|1|Top plate|Custom made||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
-|1|Axe vis sans fin|||
-|10|Attaches axes/plaques|||
+|1|Worm screw|length : cm, diameter||
+|10|Attaches axes/plaques / clamps ?|||
 |38|M4x12 Screw|||
-|4|Rondelles|||
+|4|washer|||
 |2|guides pour vis sans fin|||
 |1|Pignon petit|||
 |1|Pignon grand|||
@@ -30,19 +30,19 @@
 <br/> </p>
 |Number|Component|Specifications|Example|
 |--- |--- |--- |--- |
-|2|Axis|f|g|
+|2|linear guide|f|g|
 |4|Attaches|length 25 cm||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
-|1|Courroie|||
-|2|Pignons|||
-|2|Bras|||
-|4|Anneaux|||
-|4| circlips|||
-|1|Capteurs fin de butée|||
-|3|Grande vis|||
-|2|Attaches aux guides linéaires|||
-|1|Attache vis sans fin|||
-|14|Boulons|||
-|4|Petites vis pour encercler les axes|||
+|1|belt|length ||
+|2|gable|||
+|2|clamping jaw|||
+|4|Anneaux / rings|||
+|4| circlips / rings|||
+|1|limit switches|||
+|3|Grande vis / screw|||
+|2|binding for linear guide|||
+|1|binding for worm screw|||
+|14|fixing bolt|||
+|4|small screw|||
 |||||
 |||||
