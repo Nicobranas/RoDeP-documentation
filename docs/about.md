@@ -13,7 +13,7 @@ The project has been funded by Sony CSL entirely.
 
 The second team, composed by David COLLIAUX and Peter HANAPPE, is representing Sony CSL. Both of them works in the Sustainability department, which is "commited to build tools for a sustainable society and raise awareness about the challenges of our era". <br/><br/>
 
-Last but not least, the Polytech Sorbonne team, with Pierre CARLES and Tarik LARJA onboard, supervised the students while they were at the school, both on the technical and the management side of the project.
+Last but not least, the Polytech Sorbonne team, with Pierre CARLES, supervised the students while they were at the school, on the technical side of the project.
 <br/> </p>
 ##GitHub sources
 <p align = justify>

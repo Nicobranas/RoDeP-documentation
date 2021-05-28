@@ -7,7 +7,7 @@
 <p align = justify>First of all, the components for the support part is here :
 <br/> </p>
 |Number|Component|Specifications|Example|
-|--- |--- |--- |--- |
+|----|----|----|----|
 |4|linear guide|length : 34,5 cm, diameter 4 mm||
 |1|Bottom Plate|Custom made||
 |1|Top plate|Custom made||
@@ -16,9 +16,9 @@
 |10|Attaches axes/plaques / clamps ?|||
 |38|M4x12 Screw|||
 |4|washer|||
-|2|guides pour vis sans fin|||
-|1|Pignon petit|||
-|1|Pignon grand|||
+|2|guides pour vis sans fin // worm screw guide|||
+|1|small cogwheel|||
+|1|big cogwheel|||
 |||||
 |||||
 
@@ -29,12 +29,12 @@
 <p align = justify>The list of the elements found on the gripping part is below :
 <br/> </p>
 |Number|Component|Specifications|Example|
-|--- |--- |--- |--- |
+|----|----|----|----|
 |2|linear guide|f|g|
 |4|Attaches|length 25 cm||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
 |1|belt|length ||
-|2|gable|||
+|2|cogwheel|||
 |2|clamping jaw|||
 |4|Anneaux / rings|||
 |4| circlips / rings|||

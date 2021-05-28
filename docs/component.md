@@ -1,3 +1,9 @@
+# Bill Of Material
+
+<p align = justify>This chart makes an inventory of all the elements you need to build the robot. 
+<br/> </p>
+
+
 |Number|Component|Specifications|Example|
 |--- |--- |--- |--- |
 |1|Battery|LIFEPO4 <br/> 12V <br/> BMS Protection|[Power Battery](https://www.power-manutention.fr/batteries-decharge-lente/batterie-lithium-fer-phosphate-lifepo4-12v-12ah-power-battery-9423.html)|
