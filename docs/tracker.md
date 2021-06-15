@@ -9,25 +9,25 @@
 
 ##Line tracker operation
 
-<p align = justify>The Raspberry Pi Camera allows to obtain RGB images. These images are passed to HSV format in order to permform a thresholding on them thanks to OpenCV.</p>
+<p align = justify>The Raspberry Pi Camera allows to obtain RGB images. These images are passed to HSV format in order to permform a thresholding on them thanks to OpenCV.<br/>
 
-<p align = justify>The principle of thresholding is to set a minimum and a maximum for the value of H, S and V. For each pixel in HSV image, the function test if the value of H, S and V are between the minimum and the minimum. If it is the case then the pixel turns to white otherwise it turns to black.</p>
+The principle of thresholding is to set a minimum and a maximum for the value of H, S and V. For each pixel in HSV image, the function test if the value of H, S and V are between the minimum and the minimum. If it is the case then the pixel turns to white otherwise it turns to black.<br/>
 
-<p align = justify>Here is 3 lines of the Python code to obtain the 3 mask with the thresholding :<br/></p>
+Here is 3 lines of the Python code to obtain the 3 mask with the thresholding :<br/></p>
 
 <code> apriltag\_mask = 255-cv2.inRange(frame\_HSV, (140,110,0), (180,200,255)) 
 blue\_line\_mask = 255-cv2.inRange(frame\_HSV, (110,170,0), (130,255,255)) 
 green\_line\_mask = 255-cv2.inRange(frame\_HSV, (80,60,0), (110,170,255)) </code>
 
-<p align = justify>For the next step it is neccessary to have the objects in black on a white background. So, this is the reason of the <code>255-cv2.inrange(...)</code> to invert the colors.</p>
+<p align = justify>For the next step it is neccessary to have the objects in black on a white background. So, this is the reason of the <code>255-cv2.inrange(...)</code> to invert the colors.<br/>
 
-<p align = justify>Here are examples of masks obtained with the thresholding :<br/></p>
+Here are examples of masks obtained with the thresholding :<br/></p>
 
 ##Error calculation
 
-<p align = justify>Now that the lines are detected, the error must be defined and calculated to allow the robot to modifify its trajectory. The chosen line tracking technique is the one where we take the average of the pixels belonging to the line and we want to realign this average with the center of the image. So, the calculated error is the difference between the average of the pixels belonging to the line and the center of the image.<br/></p>
+<p align = justify>Now that the lines are detected, the error must be defined and calculated to allow the robot to modifify its trajectory. The chosen line tracking technique is the one where we take the average of the pixels belonging to the line and we want to realign this average with the center of the image. So, the calculated error is the difference between the average of the pixels belonging to the line and the center of the image.<br/>
 
-<p align = justify>The following scheme represent and define the error :<br/></p>
+The following scheme represent and define the error :<br/>
 
 <p align = justify>This error is used for the motor control. The operation of the motor control is explained on the next page.<br/></p>
 
