@@ -4,7 +4,17 @@
 
 ##The RODEP's work area
 
-<p align = justify>Here is an example of the orgazination of the robot's work area :<br/></p>
+<p align = justify>Here is an example of the orgazination of the robot's work area :<br/>
+
+add picture of workstation
+
+The picture above shows the playground of the RoDeP. There are 2 branches, a blue and a green one, and the tags are in red. These colors ease the work of the algorithm of movement.<br/>
+The tags are April Tags (or AT for the rest of the doc). The one on top is number zero, and is used to find the scanner. The green and blue ways have the numbers in opposite order, so that the robot deposite the plant the further, and grab the closer one, and avoid any collision.<br/>
+The green one is the path where the plants are stored, before launching the program. The grey squares are where the plants are. They are located 21 cm after the corresponding tag, for the gripper to have a good take of the pot. Each AT is separated by ... cm, center from center.<br/>
+The blue path is where the plants are hoarded after the scanning operation. Here, no grey square, for it is useless, as the work has been done.<br/>
+The curve has been deisgned to reducde the sharpness of the way, and avoid any suddent change of direction.<br/></p>
+
+<br/></p>
 
 
 ##Line tracker operation
