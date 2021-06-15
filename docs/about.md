@@ -18,5 +18,5 @@ Last but not least, the Polytech Sorbonne team, with Pierre CARLES, supervised t
 ##GitHub sources
 <p align = justify>
 You will find every ressources for the code part of this project on the Github down below : </br>
-
+<a href="https://github.com/Nicobranas/RDP">Click the link for the project itself</a>
 <br/> </p>

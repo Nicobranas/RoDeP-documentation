@@ -8,7 +8,7 @@
 	With this format, the robot goes through 9 states during its mission, two of them being the initial state and final state. When starting the script, make sure to specify the number of plants to be scanned.
 	We tried to define those states as intuitive as possible. Here is a diagram outlining its routine : <br/></p>
 
-add picture : routine
+![Work organization](Control files/StateMachine.png)
 
 <p align = justify>Here is the detail of every state :
 <ul>
@@ -34,47 +34,47 @@ Mission complete : the pliers close a last time, and a end-of-mission message is
 ## Fine tuning the proportional controller
 <p align = justify>At the moment, the navigation algorithm is controlled using a proportional controller. It suits our actual uses (2 parallel straight lines with 2 turns to the scanner; see figures about the route, average speed of 300 increments per seconds) but can be tuned for your situation, for instance increase the speed. Just keep in mind that the system converges naturally to the “error = 0” state, so adding an integral gain would just slow the system; adding a derivative gain would prove useful for cancelling remaining oscillations, especially if you want to re-design the route to add more curves or increase speed, but if you get high amplitude oscillations, implementing a low-pass filter is advised, in order to cancel high-frequency noise that would be amplified by the derivative.
 <br/>
-As a reminder, when the camera takes a picture, it crops it to approximately the second quarter (from the top), and we estimate the error as the distance (on the x-axis) between the center of the cropped image and the mean value of the remaining black pixels, after image filtering.
+As a reminder, when the camera takes a picture, it crops it to approximately the second quarter (from the top), and we estimate the error as the distance (on the x-axis) between the center of the cropped image and the mean value of the remaining black pixels, after image filtering.<br/></p>
 
-add picture viewing zone
+![Vision](Control files/view.png)
 
-We then multiply this error value with the proportional gain, and pass the resulting value to a differential drive for the motors : <br/>
+<p align = justify>We then multiply this error value with the proportional gain, and pass the resulting value to a differential drive for the motors : <br/></p>
 
-add picture corrector
+![Pseudo-block chain](Control files/block.png)
 
-As you can see, the speed given in each motor is equal to a certain proportion of the average speed of the wheels, in increments per seconds.<br/>
-In order to finetune the proportional gain, we give a set of tests we did in different situations. We tested 6 values in 3 different starting points, and recommend you to use the same starts in order to compare your own plots of error with ours. The graphs we give focus on the error over time regarding the line following algorithm, but beside this quantified quality, it is important to keep an acute eye over two qualitative parameters : first, the orientation of the robot at the end of the test (are the pliers in front of the plant it should be taking ?), and secondly the “empiric oscillations” of the robot. As the error is measured in pixels, oscillations appearing on the graphs might not even be detectable as a human, and therefore can be insignificant.</p>
+<p align = justify>As you can see, the speed given in each motor is equal to a certain proportion of the average speed of the wheels, in increments per seconds.<br/>
+In order to finetune the proportional gain, we give a set of tests we did in different situations. We tested 6 values in 3 different starting points, and recommend you to use the same starts in order to compare your own plots of error with ours. The graphs we give focus on the error over time regarding the line following algorithm, but beside this quantified quality, it is important to keep an acute eye over two qualitative parameters : first, the orientation of the robot at the end of the test (are the pliers in front of the plant it should be taking ?), and secondly the “empiric oscillations” of the robot. As the error is measured in pixels, oscillations appearing on the graphs might not even be detectable as a human, and therefore can be insignificant.<br/></p>
 
 ### The first set of tests
-</p align = justify>For our first set of tests, we gave the robot a step of error, and aligned it with the line it is supposed to follow, as shown on the following drawing : <br/>
+</p align = justify>For our first set of tests, we gave the robot a step of error, and aligned it with the line it is supposed to follow, as shown on the following drawing : <br/></p>
 
-picture situation
+![Work organization](Control files/Tests_kp_jeu1.JPG)
 
-Testing 6 gains with this initial state gave the following results : <br/>
+<p align = justify>Testing 6 gains with this initial state gave the following results : <br/></p>
 
-picture results
+![Work organization](Control files/straight line aligned.png)
 
-Only one gain makes the system divergent. The others complete their task with several levels of satisfaction : though not divergent, the lowest gain of 0.001 pixels^-1 is too slow and doesn’t even reach closely the order on a satisfying time, regarding our system. The gain of 0.015 pixels^-1 is also not satisfying, as it oscillates too frequently. <br/></p>
+<p align = justify>Only one gain makes the system divergent. The others complete their task with several levels of satisfaction : though not divergent, the lowest gain of 0.001 pixels^-1 is too slow and doesn’t even reach closely the order on a satisfying time, regarding our system. The gain of 0.015 pixels^-1 is also not satisfying, as it oscillates too frequently. <br/></p>
 
 ### The second set of tests
-</p align = justify>Step of error, unaligned robot :<br/>
+</p align = justify>Step of error, unaligned robot :<br/></p>
 
-picture situation
+![Work organization](Control files/Tests_kp_jeu2.JPG)
 
-With those tests, we evaluate the capacity of the robot to align with the line and the time it takes to do it. <br/>
+<p align = justify>With those tests, we evaluate the capacity of the robot to align with the line and the time it takes to do it. <br/></p>
 
-picture results
+![Work organization](Control files/straight line unaligned.png)
 
-As expected, the lowest gain tested is too low to prevent the robot from losing the line, and diverges quickly. The gain of 0.015 pixels^-1 is still unsatisfying as the navigation enters in a “pseudo-oscillatory state”, and as the robot is not aligned with the line once it gets to its objective. On the scale of the system, the gain of 0.007 pixels^-1 is a good compromise between converging speed, alignment with the objective and remaining oscillations.<br/></p>
+<p align = justify>As expected, the lowest gain tested is too low to prevent the robot from losing the line, and diverges quickly. The gain of 0.015 pixels^-1 is still unsatisfying as the navigation enters in a “pseudo-oscillatory state”, and as the robot is not aligned with the line once it gets to its objective. On the scale of the system, the gain of 0.007 pixels^-1 is a good compromise between converging speed, alignment with the objective and remaining oscillations.<br/></p>
 
 ### The third set of tests
 
-</p aligny = justify>Robot going from the scanner to the first plant.<br/>
+</p aligny = justify>Robot going from the scanner to the first plant.<br/></p>
 
-add picture sitatuin
+![Work organization](Control files/Tests_kp_jeu3.JPG)
 
-With those tests, we evaluate the capacity of the robot at reaching its effective objective in a “real situation”.</br>
+<p align = justify>With those tests, we evaluate the capacity of the robot at reaching its effective objective in a “real situation”.</br></p>
 
-add picture results
+![Work organization](Control files/scanner to plant.png)
 
-As previously mentioned, the gain of 0.007 pixels^-1 is a good choice since it makes the robot getting to its objective correctly, with a good average time.<br/></p>
+<p align = justify>As previously mentioned, the gain of 0.007 pixels^-1 is a good choice since it makes the robot getting to its objective correctly, with a good average time.<br/></p>
