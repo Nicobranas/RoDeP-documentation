@@ -1,18 +1,18 @@
 # Controlling the RoDeP
 
-<p align = justify>The RoDeP’s controls are coded in Arduino code, but its routines are coded as a state machine, using the StateMachine library from Python, for easier modifications. Here we detail its use, and give some tips about how tuning this code for your use. The main problem being the line following process, we will have a deeper look on its fine tuning.<br/></p>
+<p align = justify>The RoDeP’s controls are coded in Arduino, but its routines are coded as a state machine, using the StateMachine library from Python, for easier modifications. Here we detail its use, and give some tips about how tuning this code for your use. The main problem being the line following process, we will have a deeper look on its fine tuning.<br/></p>
 
 ## The state machine
 
-<p align = justify>The RoDeP state machine has the purpose of being reasonably understandable and tunable. It defines the robot as an object composed of a navigation controller (Arduino with drivers for controlling navigation motors), a gripper controller (Arduino with drivers for controlling the pliers), a camera and other useful parameters, such as masks for image treatment. 
-	With this format, the robot goes through 9 states during its mission, two of them being the initial state and final state. When starting the script, make sure to specify the number of plants to be scanned.
-	We tried to define those states as intuitive as possible. Here is a diagram outlining its routine : <br/></p>
+<p align = justify>The RoDeP state machine has the purpose of being reasonably understandable and tunable. It defines the robot as an object composed of a navigation controller (Arduino with drivers for controlling navigation motors), a gripper controller (Arduino with drivers for controlling the pliers), a camera and other useful parameters, such as masks for image treatment. <br/>
+With this format, the robot goes through 9 states during its mission, two of them being the initial state and final state. When starting the script, make sure to specify the number of plants to be scanned.<br/>
+We tried to define those states as intuitive as possible. Here is a diagram outlining its routine : <br/></p>
 
 ![Work organization](Control files/StateMachine.png)
 
 <p align = justify>Here is the detail of every state :
 <ul>
-    <li>Initializing : transitory state. At the start of the program, it initialize the serial ports for the Arduino controllers, warm up the camera, prepares the pliers, etc… It also creates, if not already existing, a log-folder that reports the line following error overt time, in case of testing.</li>
+    <li>Initializing : transitory state. At the start of the program, it initializes the serial ports for the Arduino controllers, warms up the camera, prepares the pliers, etc… It also creates, if not already existing, a log-folder that reports the line following error over time, in case of testing.</li>
 
    <li>Seeking : the robot follows the green line, looking for the right AprilTag to stop.</li>
 
@@ -22,14 +22,16 @@
 
    <li>Waiting for scan completion : simply waits that the scan is done to start the next state.</li>
 
-   <li>Going to storage : the robot makes a half turn and follows the blue line, stopping at the right tag for the actual plant, the pliers going down in the process.</li>
+   <li>Going to storage : the robot makes a half-turn and follows the blue line, stopping at the right tag for the actual plant, the pliers going down in the process.</li>
 
-   <li>Putting down : the robot finish to put down its pliers and then release its grip.</li>
+   <li>Putting down : the robot finishes to put down its pliers and then releases its grip.</li>
 
-   <li>Going back to scanner : the robot go back a little, makes a half turn and follows the blue line to the scanner. It makes a half turn there, and enter its mission complete state if it has scanned the number of plants specified, otherwise it goes back to the seeking state.</li>
-</ul>
+   <li>Going back to scanner : the robot goes back a little, makes a half turn and follows the blue line to the scanner. It makes a half turn there, and enters its mission complete state if it has scanned the number of plants specified, otherwise it goes back to the seeking state.</li>
 
-Mission complete : the pliers close a last time, and a end-of-mission message is displayed as a notification. <br/></p>
+   <li>Mission complete : the pliers close a last time, and a end-of-mission message is displayed as a notification. </li>
+
+</ul> <br/></p>
+
 
 ## Fine tuning the proportional controller
 <p align = justify>At the moment, the navigation algorithm is controlled using a proportional controller. It suits our actual uses (2 parallel straight lines with 2 turns to the scanner; see figures about the route, average speed of 300 increments per seconds) but can be tuned for your situation, for instance increase the speed. Just keep in mind that the system converges naturally to the “error = 0” state, so adding an integral gain would just slow the system; adding a derivative gain would prove useful for cancelling remaining oscillations, especially if you want to re-design the route to add more curves or increase speed, but if you get high amplitude oscillations, implementing a low-pass filter is advised, in order to cancel high-frequency noise that would be amplified by the derivative.
@@ -43,7 +45,7 @@ As a reminder, when the camera takes a picture, it crops it to approximately the
 ![Pseudo-block chain](Control files/block.png)
 
 <p align = justify>As you can see, the speed given in each motor is equal to a certain proportion of the average speed of the wheels, in increments per seconds.<br/>
-In order to finetune the proportional gain, we give a set of tests we did in different situations. We tested 6 values in 3 different starting points, and recommend you to use the same starts in order to compare your own plots of error with ours. The graphs we give focus on the error over time regarding the line following algorithm, but beside this quantified quality, it is important to keep an acute eye over two qualitative parameters : first, the orientation of the robot at the end of the test (are the pliers in front of the plant it should be taking ?), and secondly the “empiric oscillations” of the robot. As the error is measured in pixels, oscillations appearing on the graphs might not even be detectable as a human, and therefore can be insignificant.<br/></p>
+In order to finetune the proportional gain, we give a set of tests we did in different situations. We tested 6 values in 3 different starting points, and recommend you to use the same starts in order to compare your own plots of error with ours. The graphs we give focus on the error over time regarding the line following algorithm, but beside this quantified quality, it is important to keep an acute eye over two qualitative parameters : first, the orientation of the robot at the end of the test (are the pliers in front of the plant it should be taking ? Is the robot aligned with the path ?), and secondly the “empiric oscillations” of the robot. As the error is measured in pixels, oscillations appearing on the graphs might not even be detectable as a human, and therefore can be insignificant.<br/></p>
 
 ### The first set of tests
 </p align = justify>For our first set of tests, we gave the robot a step of error, and aligned it with the line it is supposed to follow, as shown on the following drawing : <br/></p>

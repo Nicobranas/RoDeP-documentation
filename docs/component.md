@@ -21,7 +21,7 @@
 |2|Connector strip|5-pole|[Wago](https://fr.rs-online.com/web/p/borniers-de-raccordement/5077011/?cm_mmc=FR-PLA-DS3A-_-google-_-CSS_FR_FR_Connecteurs_Whoop-_-(FR:Whoop!)+Borniers+de+raccordement,bornier+de+raccordement+(2)-_-5077011&matchtype=&pla-383168632703&gclid=EAIaIQobChMIz5PziIPR8AIVmfhRCh0g8lEAQYByABEgI4zfD_BwE&gclsrc=aw.ds)|
 |2|Rail DIN's fixation for wago||[Fixation for wago](https://fr.farnell.com/wago/222-500/montage-conn-splicing-orange/dp/2643509)|
 |2|Stepper Mounting Bracket||[NEMA 23](https://www.phidgets.com/?tier=3&catid=24&pcid=21&prodid=358)|
-|1|Frame|||
+|1|Frame|Custom made, can be found on the project Git page||
 |2|Wheel|||
 |2|Roulette|||
 |2|Battery wedge|||
