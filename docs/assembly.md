@@ -31,7 +31,7 @@
 ![Gripping system picture 2](Gripp files/Gripp_zoom2.JPG)
 ![Gripping system picture 3](Gripp files/Gripp_zoom3.JPG)
 ![Gripping system picture 4](Gripp files/Gripp_zoom4.JPG)
-
+![Gripping system picture 4](Gripp files/Gripp_zoom5.JPG)
 
 ## 3. Assembling the elevation system
 <p align = justify> In order to assemble the final part of the RoDeP, you have to gather the elements found in the second part of the gripper components :
@@ -40,6 +40,9 @@
 ![Elevation system picture 2](Gripp files/Elevation_zoom2.JPG)
 ![Elevation system picture 3](Gripp files/Elevation_zoom3.JPG)
 ![Elevation system picture 4](Gripp files/Elevation_zoom4.JPG)
+![Elevation system picture 4](Gripp files/Elevation_zoom5.JPG)
+![Elevation system picture 4](Gripp files/Elevation_zoom6.JPG)
+
 
 <p align = justify> Once this is done, the physical form of the RoDeP should be finished, now is the time for getting the code work !<br/></p>
 [The code](software.md)

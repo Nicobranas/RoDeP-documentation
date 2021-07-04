@@ -9,7 +9,7 @@
 <br/> </p>
 |Number|Component|Specifications|Example|
 |----|----|----|----|
-|2|linear guide|f|g|
+|2|linear guide|||
 |4|Attaches|length 25 cm||
 |1|Gripper motor|Step motor|[Motor](https://www.robotshop.com/eu/fr/rbsoy07-moteur-pas-a-pas-soyo.html)|
 |1|belt|length cm||

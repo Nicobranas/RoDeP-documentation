@@ -4,17 +4,16 @@ nav:
     - Home: index.md
     - About: about.md
     - Documentation:
-        - Starting instruction: starting_instruction.md
-        - Manual : manual.md
+        - Starting instructions: starting_instruction.md
         - Hardware :
-            - Starting instruction : hardware_starting.md
+            - Starting instructions : hardware_starting.md
             - Components list : component.md
             - Assembly : assembly.md
             - Gripper system : gripp.md
             - Rail DIN system : rail.md
             - Electric circuit : electriccircuit.md
         - Software :
-            - Starting instruction : software_starting.md
+            - Starting instructions : software_starting.md
             - Line tracker : tracker.md
             - Motor control : control.md
     
