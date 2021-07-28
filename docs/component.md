@@ -1,6 +1,6 @@
 # Bill Of Material
 
-<p align = justify>This chart makes an inventory of all the elements you need to build the robot. 
+<p align = justify>This chart makes an inventory of all the elements you need to build the robot.
 <br/> </p>
 
 
@@ -25,4 +25,4 @@
 |2|Wheel|||
 |2|Roulette|||
 |2|Battery wedge|||
-|||||
+|[12;30]|Inserts|M2.5|[Inserts](https://www.amazon.fr/dp/B088QJDPKK/ref=twister_B07YZQ5T3Z?_encoding=UTF8&psc=1)|
