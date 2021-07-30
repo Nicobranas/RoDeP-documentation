@@ -6,9 +6,9 @@
 
 ## Fritzing document
 
-<p align = justify>Here is a Fritzing capture, the Fritzing file have to be updated, but you still can study the drivers connection. Available on Github, links found on the first page of this documentation.</p>
+<p align = justify>This Fritzing document is avaible [here](https://github.com/Nicobranas/RoDeP-documentation/tree/master/docs/Electronic%20files). On this document, we use one driver per motor, but on the real robot we have chosen to use [gShield V5](https://www.adafruit.com/product/1750), which simplify the diagram. We didn't have represent leds and camera on it, please refere to [this guide](http://www.farnell.com/datasheets/1944095.pdf)</p>
 
-![Fritzing](Electronic files/begin_conception.png)
+![Fritzing](Electronic files/RoDeP-elec.png)
 
 ## Steppers motors
 
